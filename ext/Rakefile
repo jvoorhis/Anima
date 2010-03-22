@@ -1,0 +1,11 @@
+CC         = 'g++'
+CFLAGS     = '-Wall -Weffc++'
+FRAMEWORKS = '-framework GLUT -framework OpenGL -framework Cocoa'
+
+file 'anima' => 'anima.cpp' do
+  sh "#{CC} #{CFLAGS} #{FRAMEWORKS} -fPIC -shared anima.cpp -o libanima.dylib"
+end
+
+task :all => ['anima']
+
+task :default => :all
