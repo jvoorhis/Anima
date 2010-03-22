@@ -13,7 +13,7 @@ http://jvoorhis.com/media/anima-screenshot.png
 Anima is a Ruby domain specific language for animation. Images are defined
 as a function from a point in continuous space to a color, that is a floating
 point quadruple representing channels red, green, blue and alpha. Images can 
-e viewed with the <tt>animate</tt> method, which opens a window for viewing.
+be viewed with the <tt>animate</tt> method, which opens a window for viewing.
 
 Currently, there is only support for static images that are defined using
 floating point arithmetic. Future versions will support interactivity and
