@@ -1,0 +1,30 @@
+= Anima
+
+Author:: Jeremy Voorhis
+Copyright:: (c) 2009 Jeremy Voorhis
+License:: GPL3 (see LICENSE)
+
+  animate! do |p|
+    RGBA[1 - p.x, p.y, p.x, 0]
+  end
+
+http://jvoorhis.com/media/anima-screenshot.png
+
+Anima is a Ruby domain specific language for animation. Images are defined
+as a function from a point in continuous space to a color, that is a floating
+point quadruple representing channels red, green, blue and alpha. Images can 
+e viewed with the <tt>animate</tt> method, which opens a window for viewing.
+
+Currently, there is only support for static images that are defined using
+floating point arithmetic. Future versions will support interactivity and
+possibly define semantics for working with time.
+
+Anima is a functional, JIT compiled DSL, inspired by Elliott et. al.
+<http://conal.net/papers/jfp-saig/>. Its design is comparable to Pan's
+<http://conal.net/papers/bridges2001/>, but Anima JIT compiles its image
+processers instead of "going via C".
+
+== Requirements
+* LLVM 2.6, compiled with shared library support <http://llvm.org/>
+* ruby-llvm <http://github.com/jvoorhis/ruby-llvm>
+* OpenGL and GLUT
